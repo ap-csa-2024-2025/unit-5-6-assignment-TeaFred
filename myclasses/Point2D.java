@@ -1,3 +1,4 @@
+package myclasses;
 public class Point2D
 {
   // Fields / Attributes / Instance variables
@@ -40,19 +41,23 @@ public class Point2D
   // Additional methods
   public String toString()
   {
-    return "(" + x = ", " + y + ")";
+    return "(" + x + ", " + y + ")";
   }
 
   // Returns the distance from the origin to this point
   public double dist()
   {
-    return 0.0;
+    double diffX = x - 0;
+    double diffY = y - 0;
+    return Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
   }
 
   // Overload of dist() method
   // Returns the distance from this point to Point2D other
   public double dist(Point2D other)
   {
-    return 0.0;
+    double diffX2 = x - other.x;
+    double diffY2 = y - other.y;
+    return Math.sqrt(Math.pow(diffX2, 2) + Math.pow(diffY2, 2));
   }
 }
