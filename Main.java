@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import myclasses.Dog;
+import myclasses.Student;
 
 public class Main
 {
@@ -16,7 +17,13 @@ public class Main
   {
     Dog d = new Dog("pitbull", "stephan", "blue", 3000);
     Dog theDawg = new Dog();
-    
+    //Run program with "javac Main.java myclasses/*.java"
+    //Then "java -cp . Main"
+    Student Nathan = new Student(1007, 12, "Nathan");
+    System.out.println(Nathan);
+    Nathan.setName("Nate");
+    System.out.println(Nathan);
+
 
     
 

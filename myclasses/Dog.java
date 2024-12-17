@@ -10,10 +10,7 @@ public class Dog
 
   public Dog()
   {
-    breed = "shiba";
-    name = "Johnny";
-    color = "green";
-    weight = 100000;
+    this("shiba", "Johnny", "green", 100000); //If you use "this", it calls a constructor method that currently exists with the current inputs given, you are calling the dog constructor that takes a string, string, string, double
   }
 
   public Dog(String theBreed, String theName, String theColor, double theWeight)
@@ -21,18 +18,12 @@ public class Dog
     breed = theBreed;
     name = theName;
     color = theColor;
-    if (weight < 0)
-    {
-      weight = 0;
-    }
-    else{
-      weight = theWeight;
-    }
+    setWeight(theWeight); // You can call in a function to construct an object with fields
   }
   // Make setters
   public void setBreed(String iBreed)
   {
-    breed = iBreed;
+    this.breed = breed; //set the object's breed to the input breed, the "this" makes it reference itself
   }
 
   public void setWeight (double theWeight)
@@ -47,7 +38,7 @@ public class Dog
 
   public void setName (String theName)
   {
-    name = theName;
+    name = theName; //You can also do name = theName
   }
 
   public void setColor (String theColor)
